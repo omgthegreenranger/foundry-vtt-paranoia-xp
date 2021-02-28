@@ -19,15 +19,15 @@ jobs:
         run: |
             echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
             echo ::set-output name=VERSION_NUMBER::${GITHUB_REF/refs\/tags\/v/}
-      #Substitute the Manifest and Download URLs in the module.json
+      #Substitute the Manifest and Download URLs in the system.json
       - name: Substitute Manifest and Download Links For Versioned Ones
         id: sub_manifest_link_version
         uses: microsoft/variable-substitution@v1
         with:
-          files: 'module.json'
+          files: 'system.json'
         env:
           version: ${{ steps.get_version.outputs.VERSION_NUMBER }}
-          manifest: https://github.com/${{github.repository}}/releases/download/latest/module.json
+          manifest: https://github.com/${{github.repository}}/releases/download/latest/system.json
           download: https://github.com/${{github.repository}}/releases/download/${{ steps.get_version.outputs.VERSION }}/fvtt-paranoia-xp.zip
 
       - name: Zip files
@@ -43,7 +43,7 @@ jobs:
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './module.json,./fvtt-paranoia-xp.zip'
+          artifacts: './system.json,./fvtt-paranoia-xp.zip'
 
       # Update the 'latest' release
       - name: Create Release
@@ -55,5 +55,5 @@ jobs:
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './module.json,./fvtt-paranoia-xp.zip'
+          artifacts: './system.json,./fvtt-paranoia-xp.zip'
           tag: latest
