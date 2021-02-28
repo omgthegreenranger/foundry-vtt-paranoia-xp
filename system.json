@@ -1,0 +1,28 @@
+{
+  "name": "paranoia_xp_unofficial",
+  "title": "Paranoia XP Unofficial",
+  "description": "This system gives basic Paranoia sheets",
+  "version": "0.1",
+  "templateVersion": 1,
+  "author": "Scytodes",
+  "styles": [
+    "styles/paranoia-xp.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": false,
+  "gridDistance": 300,
+  "gridUnits": "cm",
+  "primaryTokenAttribute": "resources.health",
+  "secondaryTokenAttribute": null,
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "url": "https://github.com/Scytodes/foundry-vtt-paranoia-xp",
+  "manifest": "https://github.com/Scytodes/foundry-vtt-paranoia-xp/raw/master/system.json",
+  "download": "https://github.com/Scytodes/foundry-vtt-paranoia-xp/-/archive/release-0.1/fvtt-paranoia-xp-0.1.zip"
+}

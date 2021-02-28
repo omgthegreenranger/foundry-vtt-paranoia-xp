@@ -1,0 +1,28 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header flexrow">
+        <img class="profile" src="{{actor.img}}" title="{{actor.name}}" data-edit="img"/>
+
+        <section class="xp-header flexrow">
+            <h1 class="character_name">
+                <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'xp.name'}}" />
+            </h1>
+            <h1 class="quick_note">
+                <input name="quick_note" type="text" value="{{actor.quick_note}}" placeholder="{{ localize 'xp.quick_note'}}" />
+            </h1>
+        </section>
+    </header>
+    {{!-- Character sheet navigation --}}
+    <nav class="sheet-navigation tabs" data-group="primary">
+        <a class="item active" data-tab="main">{{ localize "xp.Main" }}</a>
+        <a class="item" data-tab="details">{{ localize "xp.Details}}</a>
+    </nav>
+    {{!-- Character sheet body --}}
+    <section class="sheet-body">
+        <div class="tab main flexrow">
+            <label>{{ localize "xp.Name"}}</label>
+            <textarea name="actor.base.name">{{ actor.base.name }}</textarea>
+        </div>
+    </section>
+ </form>

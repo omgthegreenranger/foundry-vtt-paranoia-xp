@@ -1,0 +1,87 @@
+{
+  "Actor": {
+    "types": ["pc","npc"],
+    "templates": {
+      "character_public": {
+        "name": "",
+        "gender": "",
+        "service_group": "",
+        "tics": "",
+        "duty": ""
+      },
+      "pc_public": {
+        "clearance": "",
+        "sector": "",
+        "clones": {
+          "min": 1,
+          "value": 1,
+          "max": 6
+        }
+      },
+      "character_secret": {
+        "mutant_power": "",
+        "registered_power": false,
+        "secret_society": "",
+        "degree": "",
+        "current_society_mission": "",
+        "credits": "",
+        "perversity": "",
+        "treason_codes": ""
+
+      },
+      "character_top_secret": {
+        "power_rating": "",
+        "access_rating": ""
+      }
+    },
+    "pc": {
+      "templates": ["character_public","pc_public","character_secret","character_top_secret"]
+    },
+    "npc": {
+      "templates": ["character_public","character_secret","character_top_secret"],
+      "quick_note": ""
+    },
+    "skills": {
+      "attribute": "",
+      "name": "",
+      "value": 0
+    },
+    "Item": {
+      "types": ["weapon","armor","bots","device","vehicles","misc"],
+      "templates": {
+        "basic": {
+          "name": "",
+          "type": "",
+          "cost": 0,
+          "clearance": "",
+          "notes": ""
+        }
+      },
+      "weapon": {
+        "templates": ["basic"],
+        "min-boost-max": "",
+        "shots": 0,
+        "range": 0,
+      },
+      "armor":{
+        "templates": ["basic"],
+        "protection": 0,
+      },
+      "bots": {
+        "templates": ["basic"]
+      },
+      "device": {
+        "templates": ["basic"],
+        "level": 0
+      },
+      "vehicles":{
+        "templates": ["basic"],
+        "speed": ""
+      },
+      "misc": {
+        "templates": ["basic"],
+        "uses": 1
+      }
+    }
+  }
+}
