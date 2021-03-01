@@ -1,7 +1,7 @@
 {
   "xp.Name": "Name",
   "xp.Gender": "Gender",
-  "xp.Quick_note": "Note",
+  "xp.Quick_Note": "Quick Note",
   "xp.Main": "Main",
   "xp.Inventory": "Inventory",
   "xp.Details": "Details",
@@ -13,5 +13,4 @@
   "xp.Secret_Society": "Secret Society",
   "xp.Degree": "Degree",
   "xp.Current_Society_Mission": "Current Society Mission"
-
 }

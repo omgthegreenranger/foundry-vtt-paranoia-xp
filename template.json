@@ -1,6 +1,9 @@
 {
   "Actor": {
-    "types": ["pc","npc"],
+    "types": [
+      "pc",
+      "npc"
+    ],
     "templates": {
       "base": {
         "name": "",
@@ -28,7 +31,6 @@
         "credits": "",
         "perversity": "",
         "treason_codes": ""
-
       },
       "c_top_secret": {
         "power_rating": "",
@@ -36,53 +38,82 @@
       }
     },
     "pc": {
-      "templates": ["base","base_pc","c_secret","c_top_secret"]
+      "templates": [
+        "base",
+        "base_pc",
+        "c_secret",
+        "c_top_secret"
+      ]
     },
     "npc": {
-      "templates": ["base","c_secret","c_top_secret"],
+      "templates": [
+        "base",
+        "c_secret",
+        "c_top_secret"
+      ],
       "quick_note": ""
     },
     "skills": {
       "attribute": "",
       "name": "",
       "value": 0
-    },
-    "Item": {
-      "types": ["weapon","armor","bots","device","vehicles","misc"],
-      "templates": {
-        "basic": {
-          "name": "",
-          "type": "",
-          "cost": 0,
-          "clearance": "",
-          "notes": ""
-        }
-      },
-      "weapon": {
-        "templates": ["basic"],
-        "min-boost-max": "",
-        "shots": 0,
-        "range": 0,
-      },
-      "armor":{
-        "templates": ["basic"],
-        "protection": 0,
-      },
-      "bots": {
-        "templates": ["basic"]
-      },
-      "device": {
-        "templates": ["basic"],
-        "level": 0
-      },
-      "vehicles":{
-        "templates": ["basic"],
-        "speed": ""
-      },
-      "misc": {
-        "templates": ["basic"],
-        "uses": 1
+    }
+  },
+
+  "Item": {
+    "types": [
+      "weapon",
+      "armor",
+      "bots",
+      "device",
+      "vehicles",
+      "misc"
+    ],
+    "templates": {
+      "basic": {
+        "name": "",
+        "type": "",
+        "cost": 0,
+        "clearance": "",
+        "notes": ""
       }
+    },
+    "weapon": {
+      "templates": [
+        "basic"
+      ],
+      "min-boost-max": "",
+      "shots": 0,
+      "range": 0
+    },
+    "armor": {
+      "templates": [
+        "basic"
+      ],
+      "protection": 0
+    },
+    "bots": {
+      "templates": [
+        "basic"
+      ]
+    },
+    "device": {
+      "templates": [
+        "basic"
+      ],
+      "level": 0
+    },
+    "vehicles": {
+      "templates": [
+        "basic"
+      ],
+      "speed": ""
+    },
+    "misc": {
+      "templates": [
+        "basic"
+      ],
+      "uses": 1
     }
   }
 }
