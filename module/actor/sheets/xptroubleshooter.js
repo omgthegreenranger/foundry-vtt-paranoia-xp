@@ -6,7 +6,7 @@ export default class XPTroubleshooterActor extends XPBaseSheet{
     /** @override */
     static get defaultOptions(){
         return mergeObject(super.defaultOptions, {
-            classes: ["boilerplate", "sheet", "actor"],
+            classes: ["XPBaseSheet", "sheet", "actor"],
             template: "system/paranoia_xp_unofficial/templates/actors/troubleshooter-sheet.html",
             width: 600,
             height: 600,
