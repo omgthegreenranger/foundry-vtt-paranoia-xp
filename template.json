@@ -1,7 +1,7 @@
 {
   "Actor": {
     "types": [
-      "pc",
+      "Troubleshooter",
       "npc"
     ],
     "templates": {
@@ -37,7 +37,7 @@
         "access_rating": ""
       }
     },
-    "pc": {
+    "Troubleshooter": {
       "templates": [
         "base",
         "base_pc",

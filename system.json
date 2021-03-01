@@ -5,6 +5,7 @@
   "version": "0.1",
   "templateVersion": 2,
   "author": "Scytodes",
+  "esmodules": "paranoia_xp.js",
   "styles": [
     "styles/paranoia-xp.css"
   ],
