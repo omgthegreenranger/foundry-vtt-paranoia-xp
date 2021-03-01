@@ -1,7 +1,7 @@
 //Import modules
 import {XPNPCActor} from "./module/actor/sheets/xpnpc.js";
-import {XPTroubleshooterActor} from "./module/actor/sheets/xptroubleshooter";
-import {XPCharacter} from "./module/actor/xpcharacter";
+import {XPTroubleshooterActor} from "./module/actor/sheets/xptroubleshooter.js";
+import {XPCharacter} from "./module/actor/xpcharacter.js";
 
 Hooks.once('init', async function() {
     console.log("Friend Computer boot process")
