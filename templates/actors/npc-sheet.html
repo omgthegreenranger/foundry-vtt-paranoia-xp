@@ -6,10 +6,10 @@
 
         <section class="xp-header flexrow">
             <h1 class="character_name">
-                <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'xp.name'}}" />
+                <input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'xp.Name'}}" />
             </h1>
             <h1 class="quick_note">
-                <input name="quick_note" type="text" value="{{actor.quick_note}}" placeholder="{{ localize 'xp.quick_note'}}" />
+                <input name="quick_note" type="text" value="{{data.quick_note}}" placeholder="{{ localize 'xp.quick_note'}}" />
             </h1>
         </section>
     </header>
@@ -22,7 +22,35 @@
     <section class="sheet-body">
         <div class="tab main flexrow">
             <label>{{ localize "xp.Name"}}</label>
-            <textarea name="actor.base.name">{{ actor.base.name }}</textarea>
+            <input type="text" name="actor.name" value="{{ actor.name }}" />
+
+            <label>{{ localize "xp.Gender"}}</label>
+            <input type="text" name="data.base.Gender" value="{{ data.base.Gender }}" />
+
+            <label>{{ localize "xp.Service_Group}}</label>
+            <input type="text" name="data.base.service_group" value="{{ data.base.service_group}}" />
+
+            <label>{{ localize "xp.Firm}}</label>
+            <input type="text" name="data.base.firm" value="{{ data.base.firm}}"/>
+
+            <label>{{ localize xp.Tic}}</label>
+            <textarea name="data.base.tic">{{ data.base.tic}}</textarea>
+        </div>
+        <div class="tab details flexrow">
+            <label>{{ localize "xp.Mutant_Power"}}</label>
+            <textarea name="data.c_secret.mutant_power">{{ data.c_secret.mutant_power }}</textarea>
+
+            <label>{{ localize "xp.Registered_Power"}}</label>
+            <input type="checkbox" name="data.c_secret.registered_power">{{ data.c_secret.name }}</input>
+
+            <label>{{ localize "xp.Secret_Society}}</label>
+            <textarea name="data.c_secret.secret_society">{{ data.c_secret.secret_society}}</textarea>
+
+            <label>{{ localize "xp.Degree}}</label>
+            <input type="text" name="data.c_secret.degree" value="data.c_secret.degree"\>
+
+            <label>{{ localize xp.Current_Society_Mission}}</label>
+            <textarea name="data.c_secret.current_society_mission">{{ data.c_secret.current_society_mission}}</textarea>
         </div>
     </section>
  </form>

@@ -1,9 +1,17 @@
 {
   "xp.Name": "Name",
+  "xp.Gender": "Gender",
   "xp.Quick_note": "Note",
   "xp.Main": "Main",
-  "xp.inventory": "inventory",
+  "xp.Inventory": "Inventory",
   "xp.Details": "Details",
   "xp.PC_Name_Label": "Troubleshooter",
+  "xp.Service_Group": "Service Group",
+  "xp.Firm": "Firm",
+  "xp.Mutant_Power": "Mutant Power",
+  "xp.Registered_Power": "Registered Power",
+  "xp.Secret_Society": "Secret Society",
+  "xp.Degree": "Degree",
+  "xp.Current_Society_Mission": "Current Society Mission"
 
 }

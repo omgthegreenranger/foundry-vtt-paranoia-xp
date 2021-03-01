@@ -2,10 +2,11 @@
   "Actor": {
     "types": ["pc","npc"],
     "templates": {
-      "character_public": {
+      "base": {
         "name": "",
         "gender": "",
         "service_group": "",
+        "firm": "",
         "tics": "",
         "duty": ""
       },
@@ -18,7 +19,7 @@
           "max": 6
         }
       },
-      "character_secret": {
+      "c_secret": {
         "mutant_power": "",
         "registered_power": false,
         "secret_society": "",
@@ -29,16 +30,16 @@
         "treason_codes": ""
 
       },
-      "character_top_secret": {
+      "c_top_secret": {
         "power_rating": "",
         "access_rating": ""
       }
     },
     "pc": {
-      "templates": ["character_public","pc_public","character_secret","character_top_secret"]
+      "templates": ["base","base_pc","c_secret","c_top_secret"]
     },
     "npc": {
-      "templates": ["character_public","character_secret","character_top_secret"],
+      "templates": ["base","c_secret","c_top_secret"],
       "quick_note": ""
     },
     "skills": {

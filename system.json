@@ -3,7 +3,7 @@
   "title": "Paranoia XP Unofficial",
   "description": "This system gives basic Paranoia sheets",
   "version": "0.1",
-  "templateVersion": 1,
+  "templateVersion": 2,
   "author": "Scytodes",
   "styles": [
     "styles/paranoia-xp.css"
