@@ -13,5 +13,7 @@
   "xp.Registered_Power": "Registered Power",
   "xp.Secret_Society": "Secret Society",
   "xp.Degree": "Degree",
-  "xp.Current_Society_Mission": "Current Society Mission"
+  "xp.Current_Society_Mission": "Current Society Mission",
+  "xp.Yes": "Yes",
+  "xp.No": "No"
 }
