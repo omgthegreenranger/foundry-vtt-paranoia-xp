@@ -1,17 +1,17 @@
 //Import modules
 import {XPNPCActorSheet} from "./actor/sheets/xpnpc.js";
 import {XPTroubleshooterActorSheet} from "./actor/sheets/xptroubleshooter.js";
-import {XPCharacter} from "./actor/xpcharacter.js";
+import {XPCharacterActor} from "./actor/xpcharacter.js";
 import { preloadHandlebarsTemplates } from "./templates/preload";
 
 Hooks.once('init', async function() {
-    console.log("Friend Computer boot process")
+    console.log("Friend Computer boot process");
 
     game.paranoia_xp_unofficial = {
-        XPCharacter
-    }
+        XPCharacterActor
+    };
     //Define custom entity classes
-    CONFIG.Actor.entityClass=XPCharacter;
+    CONFIG.Actor.entityClass=XPCharacterActor;
 
     //Register sheets
     Actors.unregisterSheet("core",ActorSheet);
@@ -27,4 +27,5 @@ Hooks.once('init', async function() {
         });
 
     preloadHandlebarsTemplates();
+    console.log("Friend Computer Initialization complete");
     });

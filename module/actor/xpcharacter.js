@@ -1,6 +1,6 @@
 import {Actor} from "/module/actor/actor.js"
 
-export class XPCharacter extends Actor{
+export class XPCharacterActor extends Actor{
     /**
      * Adds in dynamic data
      */
