@@ -1,7 +1,7 @@
 import {XPBaseSheet} from "./xpbase";
 
 
-export class XPNPCActor extends XPBaseSheet{
+export class XPNPCActorSheet extends XPBaseSheet{
     /** @override */
     static get defaultOptions(){
         return mergeObject(super.defaultOptions, {

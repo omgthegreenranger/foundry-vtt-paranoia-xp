@@ -2,7 +2,7 @@ import {XPBaseSheet} from "./xpbase";
 
 
 
-export class XPTroubleshooterActor extends XPBaseSheet{
+export class XPTroubleshooterActorSheet extends XPBaseSheet{
     /** @override */
     static get defaultOptions(){
         return mergeObject(super.defaultOptions, {
