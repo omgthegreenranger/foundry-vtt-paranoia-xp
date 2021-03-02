@@ -1,5 +1,5 @@
 {
-  "xp.version_num": "0.0.6.1",
+  "xp.version_num": "0.0.7",
   "xp.Name": "Name",
   "xp.Gender": "Gender",
   "xp.Quick_Note": "Quick Note",
@@ -16,5 +16,7 @@
   "xp.Degree": "Degree",
   "xp.Current_Society_Mission": "Current Society Mission",
   "xp.Yes": "Yes",
-  "xp.No": "No"
+  "xp.No": "No",
+  "xp.True": "True",
+  "xp.False": "False"
 }
