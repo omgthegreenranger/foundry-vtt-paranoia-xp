@@ -1,8 +1,8 @@
 //Import modules
-import {XPNPCActor} from "./module/actor/sheets/xpnpc.js";
-import {XPTroubleshooterActor} from "./module/actor/sheets/xptroubleshooter.js";
-import {XPCharacter} from "./module/actor/xpcharacter.js";
-import { preloadHandlebarsTemplates } from "./module/templates/preload";
+import {XPNPCActor} from "./actor/sheets/xpnpc.js";
+import {XPTroubleshooterActor} from "./actor/sheets/xptroubleshooter.js";
+import {XPCharacter} from "./actor/xpcharacter.js";
+import { preloadHandlebarsTemplates } from "./templates/preload";
 
 Hooks.once('init', async function() {
     console.log("Friend Computer boot process")
