@@ -2,10 +2,10 @@
   "name": "paranoia_xp_unofficial",
   "title": "Paranoia XP Unofficial",
   "description": "This system gives basic Paranoia sheets",
-  "version": "0.1",
+  "version": "0.0.8",
   "templateVersion": 2,
   "author": "Scytodes",
-  "esmodules": "paranoia_xp.js",
+  "esmodules": "./paranoia_xp.js",
   "styles": [
     "styles/paranoia-xp.css"
   ],
