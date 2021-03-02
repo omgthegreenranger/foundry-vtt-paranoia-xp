@@ -2,7 +2,7 @@
  *  Add abstract class for common extensions
  */
 
-export default class XPBaseSheet extends ActorSheet {
+export class XPBaseSheet extends ActorSheet {
     constructor(...args) {
         super(...args);
     }

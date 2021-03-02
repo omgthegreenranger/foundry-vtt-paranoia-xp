@@ -2,6 +2,7 @@
 import {XPNPCActor} from "./module/actor/sheets/xpnpc.js";
 import {XPTroubleshooterActor} from "./module/actor/sheets/xptroubleshooter.js";
 import {XPCharacter} from "./module/actor/xpcharacter.js";
+import { preloadHandlebarsTemplates } from "./module/templates/preload";
 
 Hooks.once('init', async function() {
     console.log("Friend Computer boot process")
@@ -21,5 +22,5 @@ Hooks.once('init', async function() {
         label:"XP.NPC"
         });
 
-
+    preloadHandlebarsTemplates();
     })
