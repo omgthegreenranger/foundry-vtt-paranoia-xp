@@ -17,5 +17,11 @@
   "xp.Yes": "Yes",
   "xp.No": "No",
   "xp.True": "True",
-  "xp.False": "False"
+  "xp.False": "False",
+
+
+
+  "XP.Infrared_s": "IR",
+  "XP.Infrared": "Infrared",
+
 }

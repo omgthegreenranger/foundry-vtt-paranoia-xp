@@ -1,31 +1,103 @@
-//Import modules
-import {XPNPCActorSheet} from "./actor/sheets/xpnpc.js";
-import {XPTroubleshooterActorSheet} from "./actor/sheets/xptroubleshooter.js";
-import {XPCharacterActor} from "./actor/xpcharacter.js";
-import { preloadHandlebarsTemplates } from "./templates/preload";
+// Import Modules
+import { ParanoiaXPActor } from "./actor/actor.js";
+import { ParanoiaXPActorSheet } from "./actor/actor-sheet.js";
+import { ParanoiaXPItem } from "./item/item.js";
+import { ParanoiaXPItemSheet } from "./item/item-sheet.js";
 
 Hooks.once('init', async function() {
-    console.log("Friend Computer boot process");
 
-    game.paranoia_xp_unofficial = {
-        XPCharacterActor
-    };
-    //Define custom entity classes
-    CONFIG.Actor.entityClass=XPCharacterActor;
+  game.paranoia_xp = {
+    ParanoiaXPActor,
+    ParanoiaXPItem,
+    rollItemMacro
+  };
 
-    //Register sheets
-    Actors.unregisterSheet("core",ActorSheet);
-    Actors.registerSheet("paranoia_xp_unofficial", XPTroubleshooterActorSheet, {
-        types: ["troubleshooter"],
-        makeDefault:true,
-        label:"XP.PC_Name_Label"
-        });
-    Actors.registerSheet("paranoia_xp_unofficial", XPNPCActorSheet, {
-        types: ["npc"],
-        makeDefault:true,
-        label:"XP.NPC"
-        });
+  /**
+   * Set an initiative formula for the system
+   * @type {String}
+   */
+  CONFIG.Combat.initiative = {
+    formula: "1d20 + @abilities.dex.mod",
+    decimals: 2
+  };
 
-    preloadHandlebarsTemplates();
-    console.log("Friend Computer Initialization complete");
+  // Define custom Entity classes
+  CONFIG.Actor.entityClass = ParanoiaXPActor;
+  CONFIG.Item.entityClass = ParanoiaXPItem;
+
+  // Register sheet application classes
+  Actors.unregisterSheet("core", ActorSheet);
+  Actors.registerSheet("paranoia_xp", ParanoiaXPActorSheet, { makeDefault: true });
+  Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("paranoia_xp", ParanoiaXPItemSheet, { makeDefault: true });
+
+  // If you need to add Handlebars helpers, here are a few useful examples:
+  Handlebars.registerHelper('concat', function() {
+    var outStr = '';
+    for (var arg in arguments) {
+      if (typeof arguments[arg] != 'object') {
+        outStr += arguments[arg];
+      }
+    }
+    return outStr;
+  });
+
+  Handlebars.registerHelper('toLowerCase', function(str) {
+    return str.toLowerCase();
+  });
+});
+
+Hooks.once("ready", async function() {
+  // Wait to register hotbar drop hook on ready so that modules could register earlier if they want to
+  Hooks.on("hotbarDrop", (bar, data, slot) => createParanoiaXPMacro(data, slot));
+});
+
+/* -------------------------------------------- */
+/*  Hotbar Macros                               */
+/* -------------------------------------------- */
+
+/**
+ * Create a Macro from an Item drop.
+ * Get an existing item macro if one exists, otherwise create a new one.
+ * @param {Object} data     The dropped data
+ * @param {number} slot     The hotbar slot to use
+ * @returns {Promise}
+ */
+async function createParanoiaXPMacro(data, slot) {
+  if (data.type !== "Item") return;
+  if (!("data" in data)) return ui.notifications.warn("You can only create macro buttons for owned Items");
+  const item = data.data;
+
+  // Create the macro command
+  const command = `game.paranoia_xp.rollItemMacro("${item.name}");`;
+  let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
+  if (!macro) {
+    macro = await Macro.create({
+      name: item.name,
+      type: "script",
+      img: item.img,
+      command: command,
+      flags: { "paranoia_xp.itemMacro": true }
     });
+  }
+  game.user.assignHotbarMacro(macro, slot);
+  return false;
+}
+
+/**
+ * Create a Macro from an Item drop.
+ * Get an existing item macro if one exists, otherwise create a new one.
+ * @param {string} itemName
+ * @return {Promise}
+ */
+function rollItemMacro(itemName) {
+  const speaker = ChatMessage.getSpeaker();
+  let actor;
+  if (speaker.token) actor = game.actors.tokens[speaker.token];
+  if (!actor) actor = game.actors.get(speaker.actor);
+  const item = actor ? actor.items.find(i => i.name === itemName) : null;
+  if (!item) return ui.notifications.warn(`Your controlled Actor does not have an item named ${itemName}`);
+
+  // Trigger the item roll
+  return item.roll();
+}

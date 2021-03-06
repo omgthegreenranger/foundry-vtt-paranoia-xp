@@ -1,15 +1,14 @@
 {
-  "name": "paranoia_xp_unofficial",
+  "name": "paranoia_xp",
   "title": "Paranoia XP Unofficial",
-  "description": "This system gives basic Paranoia sheets",
-  "version": "0.0.8",
-  "templateVersion": 2,
-  "author": "Scytodes",
-  "scripts": [],
+  "description": "Unofficial Paranoia XP System for Foundry vtt",
+  "version": "0.0.9",
+  "templateVersion": 4,
+  "author": "scytodes",
   "esmodules": ["module/paranoia_xp.js"],
-  "styles": [
-    "styles/paranoia-xp.css"
-  ],
+  "styles": ["css/paranoia_xp.css"],
+  "scripts": [],
+  "packs": [],
   "languages": [
     {
       "lang": "en",
@@ -27,4 +26,5 @@
   "url": "https://github.com/Scytodes/foundry-vtt-paranoia-xp",
   "manifest": "https://github.com/Scytodes/foundry-vtt-paranoia-xp/releases/download/latest/system.json",
   "download": "https://github.com/Scytodes/foundry-vtt-paranoia-xp/releases/download/latest/fvtt-paranoia-xp.zip"
+
 }
