@@ -83,7 +83,8 @@ export class ParanoiaXPActorSheet extends ActorSheet {
           *  Divide skills by:
           *  skill_type
           *  attribute
-          *  the list of appropriate skills
+          *  double check secret skills with attributes are handled correctly
+          *
           */
 
         skills.push(i);
