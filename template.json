@@ -12,57 +12,118 @@
           "value": 5,
           "min": 0,
           "max": 5
-        }
+        },
+        "description": "",
+        "clearance": "",
+        "clone": {
+          "value": 1,
+          "min": 1,
+          "max": 6
+        },
+        "gender": ""
       }
     },
     "character": {
       "templates": ["base"],
       "biography": "",
-      "attributes": {
-        "level": {
-          "value": 1
+      "bonus_duty": "",
+      "restricted": {
+        "power": {
+          "value": 1,
+          "min": 1,
+          "max": 1
+        },
+        "access": {
+          "value": 1,
+          "min": 1,
+          "max": 1
         }
       },
+      "private": {
+        "mutant_power": {
+          "name": "",
+          "is_registered": false
+        },
+        "secret_society": {
+          "name": "",
+          "degree": 1,
+          "current_mission": ""
+        },
+        "credits": 0,
+        "perversity": 25,
+        "treason_codes": ""
+      },
+      "thoughts": {
+        "mental_note": ""
+      },
       "abilities": {
-        "str": {
-          "value": 10
+        "Management": {
+          "value": 7,
+          "type": "action"
         },
-        "dex": {
-          "value": 10
+        "Stealth": {
+          "value": 7,
+          "type": "action"
         },
-        "con": {
-          "value": 10
+        "Violence": {
+          "value": 7,
+          "type": "action"
         },
-        "int": {
-          "value": 10
+        "Hardware": {
+          "value": 7,
+          "type": "knowledge"
         },
-        "wis": {
-          "value": 10
+        "Software": {
+          "value": 7,
+          "type": "knowledge"
         },
-        "cha": {
-          "value": 10
+        "Wetware": {
+          "value": 7,
+          "type": "knowledge"
         }
       }
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item","weapon", "skill"],
     "templates": {
       "base": {
-        "description": ""
+        "description": "",
+        "clearance": ""
+      },
+      "assignable": {
+        "assigned_player": "",
+        "assignment_note": ""
+      },
+      "combat": {
+        "weapon_type": "",
+        "damage_type": "",
+        "min_boost_max": "",
+        "shots": 0,
+        "range": 0
+      },
+      "item_base": {
+        "quantity": 1,
+        "identified": true,
+        "unidentified_description": "",
+        "unidentified_name": "",
+        "equipment_type": "treasonous"
       }
     },
     "item": {
-      "templates": ["base"],
-      "quantity": 1,
-      "weight": 0
+      "templates": ["base","item_base","assignable"]
     },
-    "feature": {
-      "templates": ["base"]
+    "weapon": {
+      "templates": ["base","item_base","assignable","combat"]
     },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
+    "skill": {
+      "templates": ["base","skills"],
+      "ability": "",
+      "skill_level": 0,
+      "type": "",
+      "secret": 0,
+      "weakness": false
     }
+
   }
 }

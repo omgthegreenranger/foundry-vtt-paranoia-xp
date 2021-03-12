@@ -4,6 +4,7 @@
   "xp.True": "True",
   "xp.False": "False",
   "xp.Main": "Main",
+  "xp.Add_Item": "Add Item",
 
   "xp.PC_Name_Label": "Troubleshooter",
   "xp.NPC": "NPC",
@@ -14,6 +15,11 @@
   "xp.Quick_Note": "Quick Note",
   "xp.Inventory": "Inventory",
   "xp.Details": "Details",
+  "xp.Description": "Description",
+  "xp.Attributes": "Attributes",
+  "xp.Skills": "Skills",
+  "xp.Items": "Items",
+  "xp.Add_Skill": "Add Skill",
   "xp.Service_Group": "Service Group",
   "xp.Firm": "Firm",
   "xp.Mutant_Power": "Mutant Power",
@@ -22,7 +28,13 @@
   "xp.Degree": "Degree",
   "xp.Current_Society_Mission": "Current Society Mission",
 
+  "xp.Personal": "Personal",
+  "xp.Assigned": "Assigned",
+  "xp.Treasonous": "Treasonous",
 
+  "xp.Uncommon": "Uncommon",
+  "xp.Unlikely": "Unlikely",
+  "xp.Unhealthy": "Unhealthy",
 
   "xp.Infrared_s": "IR",
   "xp.Infrared": "Infrared",
@@ -40,8 +52,8 @@
   "xp.Indigo": "Indigo",
   "xp.Violet_s": "V",
   "xp.Violet": "Violet",
-  "xp.UltraViolet_s": "U",
-  "xp.UltraViolet": "Ultraviolet",
+  "xp.Ultraviolet_s": "U",
+  "xp.Ultraviolet": "Ultraviolet",
 
   "xp.Action_Skills": "Action Skills",
     "xp.Management": "Management",

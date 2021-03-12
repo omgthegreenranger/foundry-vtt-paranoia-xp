@@ -3,6 +3,7 @@ import { ParanoiaXPActor } from "./actor/actor.js";
 import { ParanoiaXPActorSheet } from "./actor/actor-sheet.js";
 import { ParanoiaXPItem } from "./item/item.js";
 import { ParanoiaXPItemSheet } from "./item/item-sheet.js";
+import { PARANOIA_XP} from "./config";
 
 Hooks.once('init', async function() {
 

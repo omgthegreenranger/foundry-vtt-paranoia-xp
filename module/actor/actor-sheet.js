@@ -44,20 +44,12 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     const actorData = sheetData.actor;
 
     // Initialize containers.
-    const gear = [];
-    const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
-    };
+    const gear_personal = [];
+    const gear_assigned =[];
+    const gear_treasonous =[];
+    const gear_unassigned=[];
+    const skills = [];
+
 
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
@@ -65,25 +57,48 @@ export class ParanoiaXPActorSheet extends ActorSheet {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
-      }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
-      }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.data.spellLevel != undefined) {
-          spells[i.data.spellLevel].push(i);
+      if (i.type === 'item' || i.type==='weapon') {
+        switch (i.data.type){
+          case "personal":
+            gear_personal.push(i);
+            break;
+          case "assigned":
+            gear_assigned.push(i);
+            break;
+          case "treasonous":
+            gear_treasonous.push(i);
+            break;
+          default:
+            //any data that is corrupted put here to be deleted or fixed
+            gear_unassigned.push(i);
         }
+
       }
-    }
+
+
+      // Append to skills
+      else if (i.type === 'skill') {
+        /**
+          * TODO
+          *  Divide skills by:
+          *  skill_type
+          *  attribute
+          *  the list of appropriate skills
+          */
+
+        skills.push(i);
+      }
+
+      }
+
 
     // Assign and return
-    actorData.gear = gear;
-    actorData.features = features;
-    actorData.spells = spells;
+    actorData.gear_personal = gear_personal;
+    actorData.gear_assigned = gear_assigned;
+    actorData.gear_treasonous = gear_treasonous;
+    actorData.gear_unassigned = gear_unassigned;
+    actorData.skill = skills;
+
   }
 
   /* -------------------------------------------- */
