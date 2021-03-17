@@ -1,0 +1,43 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'xp.Name' }}"/></h1>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "xp.Description"}}</a>
+        <a class="item" data-tab="attributes">{{ localize "xp.Attributes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+        </div>
+
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+
+            <div class="paranoia_xp attribute">
+                <label>{{localize "xp.Clearance"}}</label>
+                <select name="data.skill.clearance">
+                    {{#select data.skill.clearance}}
+                        {{#each config.security_levels}}
+                            <option value="{{@key}}">{{localize this}}</option>
+                        {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div class="paranoia_xp attribute gm_only">
+                <label>{{localize "xp.Start_Skill"}}</label>
+                <input type="checkbox" name="data.skill.starting" {{checked data.skill.starting}}>
+            </div>
+            {{!-- As you add new fields, add them in here! --}}
+        </div>
+    </section>
+</form>

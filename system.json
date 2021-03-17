@@ -2,7 +2,7 @@
   "name": "paranoia_xp",
   "title": "Paranoia XP Unofficial",
   "description": "Unofficial Paranoia XP System for Foundry vtt",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "templateVersion": 6,
   "author": "scytodes",
   "esmodules": ["module/paranoia_xp.js"],
