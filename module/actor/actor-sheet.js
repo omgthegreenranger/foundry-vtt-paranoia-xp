@@ -22,9 +22,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     const data = super.getData();
     data.config=CONFIG.PARANOIA_XP;
     data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.abilities)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }
+
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
@@ -199,15 +197,18 @@ export class ParanoiaXPActorSheet extends ActorSheet {
    */
   _onNameChange(event) {
     //add in base name
-
-    let name=actorData.base_name;
+    let data=this.getData();
+    let name=data.base_name;
 
     //add in and localize security level
-    name=name.concat("-",game.i18n.format(CONFIG.PARANOIA_XP.security_levels_short[actorData.clearance]));
+    if (data.clearance === "") {
+      data.clearance="Infrared";
+    }
+    name += "-" + game.i18n.format(CONFIG.PARANOIA_XP.security_levels_short[data.clearance]);
 
     //add in sector and clones
-    name=name.concat("-",actorData.sector,"-",actorData.clones.value);
-    actorData.name=name;
+    name+="-"+data.sector+"-"+data.clones.value;
+    data.name=name;
   }
 
 }
