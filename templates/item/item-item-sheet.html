@@ -3,15 +3,32 @@
         <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'xp.Name' }}"/></h1>
-            <div class="grid grid-2col">
-              <div class="resource">
+            <div class="grid grid-3col">
+              <div class="paranoia_xp resource">
                 <label class="resource-label">Quantity</label>
                   <input type="text" name="data.quantity" value="{{data.quantity}}" data-dtype="Number"/>
               </div>
-              <div class="resource">
-                <label class="resource-label">Weight</label>
-                  <input type="text" name="data.weight" value="{{data.weight}}" data-dtype="Number"/>
-              </div>
+                <div class="paranoia_xp resource">
+                    <label class="resource-label">{{localize "xp.Equipment_Type"}}</label>
+                    <select name="data.equipment_type">
+                        {{#select data.equipment_type}}
+                            {{#each config.equipment_types}}
+                                <option value="{{@key}}">{{localize this}}</option>
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                 <div class="paranoia_xp resource">
+                    <label class="resource-label">{{localize "xp.Clearance"}}</label>
+                    <select name="data.clearance">
+                        {{#select data.clearance}}
+                            {{#each config.security_levels}}
+                                <option value="{{@key}}">{{localize this}}</option>
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+
             </div>
         </div>
     </header>
@@ -33,7 +50,8 @@
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             {{!-- As you add new fields, add them in here! --}}
-            <input type="text" name="type" value="{{item.equipment_type}}" data-dtype="Text"/>
+
+
         </div>
     </section>
 </form>

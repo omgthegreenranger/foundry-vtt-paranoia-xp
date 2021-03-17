@@ -30,6 +30,7 @@ export class ParanoiaXPItemSheet extends ItemSheet {
   /** @override */
   getData() {
     const data = super.getData();
+    data.config=CONFIG.PARANOIA_XP;
     return data;
   }
 

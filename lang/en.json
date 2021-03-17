@@ -11,6 +11,7 @@
 
 
   "xp.Name": "Name",
+  "xp.Clones": "Clones",
   "xp.Gender": "Gender",
   "xp.Quick_Note": "Quick Note",
   "xp.Inventory": "Inventory",
@@ -28,7 +29,9 @@
   "xp.Secret_Society": "Secret Society",
   "xp.Degree": "Degree",
   "xp.Current_Society_Mission": "Current Society Mission",
+  "xp.Start_Skill": "Starting Skill",
 
+  "xp.Equipment_Type": "Equipment Type",
   "xp.Personal": "Personal",
   "xp.Assigned": "Assigned",
   "xp.Treasonous": "Treasonous",
@@ -37,6 +40,9 @@
   "xp.Unlikely": "Unlikely",
   "xp.Unhealthy": "Unhealthy",
 
+  "xp.Clearance": "Clearance",
+  "xp.Gray_s": "?",
+  "xp.Gray": "?",
   "xp.Infrared_s": "IR",
   "xp.Infrared": "Infrared",
   "xp.Red_s": "R",

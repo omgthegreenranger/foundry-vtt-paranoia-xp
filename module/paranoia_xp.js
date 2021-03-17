@@ -3,7 +3,7 @@ import { ParanoiaXPActor } from "./actor/actor.js";
 import { ParanoiaXPActorSheet } from "./actor/actor-sheet.js";
 import { ParanoiaXPItem } from "./item/item.js";
 import { ParanoiaXPItemSheet } from "./item/item-sheet.js";
-import { PARANOIA_XP} from "./config";
+import { PARANOIA_XP} from "./config.js";
 
 Hooks.once('init', async function() {
 
@@ -12,7 +12,7 @@ Hooks.once('init', async function() {
     ParanoiaXPItem,
     rollItemMacro
   };
-
+  CONFIG.PARANOIA_XP=PARANOIA_XP;
   /**
    * Set an initiative formula for the system
    * @type {String}

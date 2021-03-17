@@ -20,8 +20,9 @@ export class ParanoiaXPActorSheet extends ActorSheet {
   /** @override */
   getData() {
     const data = super.getData();
+    data.config=CONFIG.PARANOIA_XP;
     data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes)) {
+    for (let attr of Object.values(data.data.abilities)) {
       attr.isCheckbox = attr.dtype === "Boolean";
     }
 
@@ -82,7 +83,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
           * TODO
           *  Divide skills by:
           *  skill_type
-          *  attribute
+          *  abilities
           *  double check secret skills with attributes are handled correctly
           *
           */
@@ -140,7 +141,11 @@ export class ParanoiaXPActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+
+    //Name update
+    html.find('.name_string').onChange(this._onNameChange(this));
   }
+
 
   /**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
@@ -187,6 +192,22 @@ export class ParanoiaXPActorSheet extends ActorSheet {
         flavor: label
       });
     }
+  }
+
+  /**
+   * Handle automatic name compilation
+   */
+  _onNameChange(event) {
+    //add in base name
+
+    let name=actorData.base_name;
+
+    //add in and localize security level
+    name=name.concat("-",game.i18n.format(CONFIG.PARANOIA_XP.security_levels_short[actorData.clearance]));
+
+    //add in sector and clones
+    name=name.concat("-",actorData.sector,"-",actorData.clones.value);
+    actorData.name=name;
   }
 
 }

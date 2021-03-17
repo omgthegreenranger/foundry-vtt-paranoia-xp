@@ -31,6 +31,7 @@ PARANOIA_XP.equipment_types={
 }
 
 PARANOIA_XP.security_levels={
+    "Gray":"xp.Gray",
     "Infrared":"xp.Infrared",
     "Red":"xp.Red",
     "Orange": "xp.Orange",
@@ -42,6 +43,7 @@ PARANOIA_XP.security_levels={
     "Ultraviolet": "xp.Ultraviolet",
 }
 PARANOIA_XP.security_levels_short={
+    "Gray":"xp.Gray_s",
     "Infrared":"xp.Infrared_s",
     "Red":"xp.Red_s",
     "Orange": "xp.Orange_s",

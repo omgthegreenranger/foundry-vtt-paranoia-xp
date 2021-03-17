@@ -1,26 +1,43 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character","npc"],
     "templates": {
       "base": {
-        "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
-        },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
-        },
         "description": "",
-        "clearance": "",
+        "base_name": "",
+        "clearance": "Infrared",
+        "sector": "AAA",
         "clone": {
           "value": 1,
           "min": 1,
           "max": 6
         },
-        "gender": ""
+        "gender": "",
+        "abilities": {
+        "Management": {
+          "value": 7,
+          "type": "action"
+        },
+        "Stealth": {
+          "value": 7,
+          "type": "action"
+        },
+        "Violence": {
+          "value": 7,
+          "type": "action"
+        },
+        "Hardware": {
+          "value": 7,
+          "type": "knowledge"
+        },
+        "Software": {
+          "value": 7,
+          "type": "knowledge"
+        },
+        "Wetware": {
+          "value": 7,
+          "type": "knowledge"
+        }
       }
     },
     "character": {
@@ -55,33 +72,8 @@
       },
       "thoughts": {
         "mental_note": ""
-      },
-      "abilities": {
-        "Management": {
-          "value": 7,
-          "type": "action"
-        },
-        "Stealth": {
-          "value": 7,
-          "type": "action"
-        },
-        "Violence": {
-          "value": 7,
-          "type": "action"
-        },
-        "Hardware": {
-          "value": 7,
-          "type": "knowledge"
-        },
-        "Software": {
-          "value": 7,
-          "type": "knowledge"
-        },
-        "Wetware": {
-          "value": 7,
-          "type": "knowledge"
-        }
       }
+
     }
   },
   "Item": {
@@ -89,7 +81,7 @@
     "templates": {
       "base": {
         "description": "",
-        "clearance": ""
+        "starting": false
       },
       "assignable": {
         "assigned_player": "",
@@ -104,6 +96,7 @@
       },
       "item_base": {
         "quantity": 1,
+        "clearance": "",
         "identified": true,
         "unidentified_description": "",
         "unidentified_name": "",

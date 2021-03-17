@@ -22,6 +22,21 @@
 
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
+
+            <div class="paranoia_xp attribute">
+                <label>{{localize "xp.Clearance"}}</label>
+                <select name="data.skill.clearance">
+                    {{#select data.skill.clearance}}
+                        {{#each config.security_levels}}
+                            <option value="{{@key}}">{{localize this}}</option>
+                        {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div class="paranoia_xp attribute gm_only">
+                <label>{{localize "xp.Start_Skill"}}</label>
+                <input type="checkbox" name="data.skill.starting" {{checked data.skill.starting}}>
+            </div>
             {{!-- As you add new fields, add them in here! --}}
         </div>
     </section>
