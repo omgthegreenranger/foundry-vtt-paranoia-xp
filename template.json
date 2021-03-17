@@ -77,7 +77,11 @@
     }
   },
   "Item": {
-    "types": ["item","weapon", "skill"],
+    "types": [
+      "item",
+      "weapon",
+      "skill"
+    ],
     "templates": {
       "base": {
         "description": "",
@@ -104,19 +108,32 @@
       }
     },
     "item": {
-      "templates": ["base","item_base","assignable"]
+      "templates": [
+        "base",
+        "item_base",
+        "assignable"
+      ]
     },
     "weapon": {
-      "templates": ["base","item_base","assignable","combat"]
+      "templates": [
+        "base",
+        "item_base",
+        "assignable",
+        "combat"
+      ]
     },
     "skill": {
-      "templates": ["base","skills"],
+      "templates": [
+        "base",
+        "skills"
+      ],
       "ability": "",
       "skill_level": 0,
       "type": "",
       "secret": 0,
       "weakness": false
     }
+  }
 
   }
 }
