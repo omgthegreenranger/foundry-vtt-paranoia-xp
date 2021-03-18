@@ -7,7 +7,7 @@
     "templates": {
       "base": {
         "description": "",
-        "base_name": "",
+        "basename": "",
         "clearance": "Infrared",
         "sector": "AAA",
         "clone": {
@@ -42,8 +42,9 @@
             "type": "knowledge"
           }
         }
-      },
-      "character": {
+      }
+    },
+    "character": {
         "templates": [
           "base"
         ],
@@ -78,7 +79,9 @@
         "thoughts": {
           "mental_note": ""
         }
-      }
+      },
+    "npc":{
+      "templates": ["base"]
     }
   },
   "Item": {

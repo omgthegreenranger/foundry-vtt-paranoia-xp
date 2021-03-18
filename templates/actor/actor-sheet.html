@@ -12,7 +12,7 @@
            <div class="paranoia_xp attribute grid grid-4col">
            <div class="paranoia_xp attribute">
                 <label>{{localize "xp.Name"}}</label>
-                <input class="paranoia_xp .name_string" name="name" type="text" value="{{data.base_name}}" placeholder="Name"/>
+                <input class="paranoia_xp .name_string" name="data.basename" type="text" value="{{data.basename}}" placeholder="{{localize xp.Name}}"/>
             </div>
             <div class="paranoia_xp attribute">
                 <label>{{localize "xp.Clearance"}}</label>
@@ -24,6 +24,10 @@
                     {{/select}}
                 </select>
                 </div>
+               <div class="paranoia_xp attribute">
+                <label>{{localize "xp.Sector"}}</label>
+                <input class="paranoia_xp .name_string" name="data.sector" type="text" value="{{data.sector}}"/>
+            </div>
                 <div class="resource flex-group-center">
                   <label for="data.clone.value" class="resource-label">{{localize "xp.Clones"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">

@@ -141,7 +141,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     }
 
     //Name update
-    html.find('.name_string').onChange(this._onNameChange(this));
+    html.find('.name_string').change(this._onNameChange(this));
   }
 
 
@@ -197,18 +197,21 @@ export class ParanoiaXPActorSheet extends ActorSheet {
    */
   _onNameChange(event) {
     //add in base name
-    let data=this.getData();
-    let name=data.base_name;
-
-    //add in and localize security level
-    if (data.clearance === "") {
-      data.clearance="Infrared";
+    const data=this.actor.data.data
+    let name=data.basename;
+    if (name===undefined){
+      this.actor.update({"data.basename":this.actor.name});
     }
+    //add in and localize security level
+    //if (data.clearance === "") {
+    //  data.clearance="Infrared";
+    //}
     name += "-" + game.i18n.format(CONFIG.PARANOIA_XP.security_levels_short[data.clearance]);
 
     //add in sector and clones
-    name+="-"+data.sector+"-"+data.clones.value;
-    data.name=name;
+    name+="-"+data.sector+"-"+data.clone.value;
+    return this.actor.update({"name": name});
+
   }
 
 }

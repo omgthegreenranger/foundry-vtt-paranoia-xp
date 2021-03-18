@@ -25,6 +25,7 @@ export class ParanoiaXPActor extends Actor {
   _prepareCharacterData(actorData) {
     const data = actorData.data;
 
+
     // Make modifications to data here. For example:
 
   }
