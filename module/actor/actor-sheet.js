@@ -23,7 +23,6 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     data.config=CONFIG.PARANOIA_XP;
     data.dtypes = ["String", "Number", "Boolean"];
 
-
     // Prepare items.
     if (this.actor.data.type == 'character') {
       this._prepareCharacterItems(data);
@@ -103,6 +102,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
 
   /* -------------------------------------------- */
 
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
@@ -139,9 +139,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
-
-    //Name update
-    html.find('.name_string').change(this._onNameChange(this));
+    html.find('.name_string').on("change name_string",this._onNameChange(this));
   }
 
 
@@ -199,17 +197,14 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     //add in base name
     const data=this.actor.data.data
     let name=data.basename;
-    if (name===undefined){
-      this.actor.update({"data.basename":this.actor.name});
+    if (name === undefined || name === null) {
+      this.actor.update({"data.basename": this.actor.name});
+      name=this.actor.name;
     }
-    //add in and localize security level
-    //if (data.clearance === "") {
-    //  data.clearance="Infrared";
-    //}
     name += "-" + game.i18n.format(CONFIG.PARANOIA_XP.security_levels_short[data.clearance]);
 
     //add in sector and clones
-    name+="-"+data.sector+"-"+data.clone.value;
+    name += "-" + data.sector + "-" + data.clone.value;
     return this.actor.update({"name": name});
 
   }

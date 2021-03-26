@@ -7,7 +7,7 @@
     "templates": {
       "base": {
         "description": "",
-        "basename": "",
+        "basename": null,
         "clearance": "Infrared",
         "sector": "AAA",
         "clone": {
@@ -16,6 +16,7 @@
           "max": 6
         },
         "gender": "",
+        "tics": "",
         "abilities": {
           "Management": {
             "value": 7,
@@ -50,6 +51,8 @@
         ],
         "biography": "",
         "bonus_duty": "",
+        "service_group": "",
+        "firm": "",
         "restricted": {
           "power": {
             "value": 1,
