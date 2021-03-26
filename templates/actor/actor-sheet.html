@@ -11,11 +11,11 @@
 
            <div class="paranoia_xp attribute grid grid-4col">
            <div class="paranoia_xp attribute">
-                <label>{{localize "xp.Name"}}</label>
-                <input class="paranoia_xp .name_string" name="data.basename" type="text" value="{{data.basename}}" placeholder="{{localize xp.Name}}"/>
+                <label class="attribute-label">{{localize "xp.Name"}}</label>
+                <input class="paranoia_xp .name_string" name="data.basename" type="text" value="{{data.basename}}"/>
             </div>
             <div class="paranoia_xp attribute">
-                <label>{{localize "xp.Clearance"}}</label>
+                <label class="attribute-label">{{localize "xp.Clearance"}}</label>
                 <select class="paranoia_xp .name_string" name="data.clearance">
                     {{#select data.clearance}}
                         {{#each config.security_levels}}
@@ -25,12 +25,12 @@
                 </select>
                 </div>
                <div class="paranoia_xp attribute">
-                <label>{{localize "xp.Sector"}}</label>
+                <label class="attribute-label">{{localize "xp.Sector"}}</label>
                 <input class="paranoia_xp .name_string" name="data.sector" type="text" value="{{data.sector}}"/>
             </div>
-                <div class="resource flex-group-center">
-                  <label for="data.clone.value" class="resource-label">{{localize "xp.Clones"}}</label>
-                  <div class="resource-content flexrow flex-center flex-between">
+                <div class="paranoia_xp attribute">
+                  <label for="data.clone.value" class="attribute-label">{{localize "xp.Clones"}}</label>
+                  <div class="attribute flexrow flex-center flex-between">
                     <input class="paranoia_xp .name_string" type="text" name="data.clone.value" value="{{data.clone.value}}" data-dtype="Number"/>
                     <span> / </span>
                     <input type="text" name="data.clone.max" value="{{data.clone.max}}" data-dtype="Number"/>
@@ -53,7 +53,34 @@
 
         {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
-            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            <div class="paranoia_xp attribute grid grid-2col">
+                 <div class="paranoia_xp attribute">
+                    <label class="attribute-label">{{localize "xp.Gender"}}</label>
+                    <input class="paranoia_xp " name="data.gender" type="text" value="{{data.gender}}"/>
+                 </div>
+                <div class="paranoia_xp attribute">
+                    <label class="attribute-label">{{localize "xp.Bonus_Duty"}}</label>
+                    <input class="paranoia_xp " name="data.bonus_duty" type="text" value="{{data.bonus_duty}}"/>
+                 </div>
+            </div>
+            <div class="paranoia_xp attribute grid grid-2col">
+                <div class="paranoia_xp attribute">
+                    <label class="attribute-label">{{localize "xp.Service_Group"}}</label>
+                    <input class="paranoia_xp " name="data.service_group" type="text" value="{{data.service_group}}"/>
+                 </div>
+                <div class="paranoia_xp attribute">
+                    <label class="attribute-label">{{localize "xp.Firm"}}</label>
+                    <input class="paranoia_xp " name="data.firm" type="text" value="{{data.firm}}"/>
+                 </div>
+            </div>
+
+                <label class="attribute-label">{{localize "xp.Tics"}}</label>
+                {{editor content=data.tics target="data.tics" button=true owner=owner editable=editable}}
+
+
+                <label class="attribute-label">{{localize "xp.Biography"}}</label>
+                {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+
         </div>
 
         {{!-- Owned Items Tab --}}
