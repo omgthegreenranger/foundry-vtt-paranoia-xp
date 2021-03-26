@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
 /* Global styles */
 .window-app {
-  font-family: "Lucida Console", sans-serif;
+  font-family: "Tahoma", sans-serif;
 }
 
 .rollable:hover, .rollable:focus {
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
+}
+
+.vtt,
+.game,
+.system-paranoia_xp {
+  font-family: "Tahoma", sans-serif;
 }
 
 .grid,
@@ -116,7 +122,7 @@
 
 /* Styles limited to paranoia xp sheets */
 .paranoia_xp .item-form {
-  font-family: "Lucida Console", sans-serif;
+  font-family: "Tahoma", sans-serif;
 }
 
 .paranoia_xp .sheet-header {
@@ -205,6 +211,12 @@
 .paranoia_xp .tabs .item.active {
   text-decoration: underline;
   text-shadow: none;
+}
+
+.paranoia_xp .tabs .editor {
+  height: 60px;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
 }
 
 .paranoia_xp .items-list {
