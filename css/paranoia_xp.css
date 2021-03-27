@@ -279,7 +279,7 @@
 }
 
 .paranoia_xp .security_gray_sb {
-  scrollbar-color: #777777 #000;
+  scrollbar-color: #777777 #fff;
 }
 
 .paranoia_xp .security_gray_sb::-webkit-scrollbar-thumb {
@@ -321,7 +321,7 @@
 }
 
 .paranoia_xp .security_orange_sb {
-  scrollbar-color: #ffa500 #000;
+  scrollbar-color: #ffa500 #fff;
 }
 
 .paranoia_xp .security_orange_sb::-webkit-scrollbar-thumb {
@@ -335,7 +335,7 @@
 }
 
 .paranoia_xp .security_yellow_sb {
-  scrollbar-color: #ffff00 #000;
+  scrollbar-color: #ffff00 #fff;
 }
 
 .paranoia_xp .security_yellow_sb::-webkit-scrollbar-thumb {
@@ -349,7 +349,7 @@
 }
 
 .paranoia_xp .security_green_sb {
-  scrollbar-color: #00ff00 #000;
+  scrollbar-color: #00ff00 #fff;
 }
 
 .paranoia_xp .security_green_sb::-webkit-scrollbar-thumb {
@@ -363,7 +363,7 @@
 }
 
 .paranoia_xp .security_blue_sb {
-  scrollbar-color: #4599ff #000;
+  scrollbar-color: #4599ff #fff;
 }
 
 .paranoia_xp .security_blue_sb::-webkit-scrollbar-thumb {
@@ -405,7 +405,7 @@
 }
 
 .paranoia_xp .security_ultraviolet_sb {
-  scrollbar-color: #000 #000;
+  scrollbar-color: #000 #fff;
 }
 
 .paranoia_xp .security_ultraviolet_sb::-webkit-scrollbar-thumb {

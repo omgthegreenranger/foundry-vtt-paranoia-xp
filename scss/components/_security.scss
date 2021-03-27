@@ -3,7 +3,7 @@
   color: $c-black;
 }
 .security_gray_sb {
-  scrollbar-color: $c-Gray $c-black;
+  scrollbar-color: $c-Gray $c-white;
 }
 .security_gray_sb::-webkit-scrollbar-thumb {
   background: $c-Gray;
@@ -38,7 +38,7 @@
   color: $c-black;
 }
 .security_orange_sb {
-  scrollbar-color: $c-Orange $c-black;
+  scrollbar-color: $c-Orange $c-white;
 }
 
 .security_orange_sb::-webkit-scrollbar-thumb {
@@ -50,7 +50,7 @@
   color: $c-black;
 }
 .security_yellow_sb {
-  scrollbar-color: $c-Yellow $c-black;
+  scrollbar-color: $c-Yellow $c-white;
 }
 .security_yellow_sb::-webkit-scrollbar-thumb {
   background: $c-Yellow;
@@ -61,7 +61,7 @@
   color: $c-black;
 }
 .security_green_sb {
-  scrollbar-color: $c-Green $c-black;
+  scrollbar-color: $c-Green $c-white;
 }
 .security_green_sb::-webkit-scrollbar-thumb {
   background: $c-Green;
@@ -73,7 +73,7 @@
   color: $c-black;
 }
 .security_blue_sb {
-  scrollbar-color: $c-Blue $c-black;
+  scrollbar-color: $c-Blue $c-white;
 }
 .security_blue_sb::-webkit-scrollbar-thumb {
   background: $c-Blue;
@@ -107,7 +107,7 @@
   color: $c-black;
 }
 .security_ultraviolet_sb {
-  scrollbar-color: $c-black $c-black;
+  scrollbar-color: $c-black $c-white;
 }
 .security_ultraviolet_sb::-webkit-scrollbar-thumb {
   background: $c-black;
