@@ -1,5 +1,23 @@
+.app,
 .window-app {
   font-family: $font-primary;
+}
+.window-app .window-content{
+  background: white;
+  background-image: none ;
+}
+
+.window-header{
+  border-top-left-radius: $corner-round;
+  border-top-right-radius: $corner-round;
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+  height: 15px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
 }
 
 .rollable {

@@ -221,12 +221,15 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     let sec_level=this.actor.data.data.clearance;
     let sec_class=CONFIG.PARANOIA_XP.security_levels_css[sec_level];
     let window=this.element[0].children[0];
+    let scrollbar=this.element[0].children[1];
     console.log(window)
     //remove old security class
     for (const [sl, value] of Object.entries(CONFIG.PARANOIA_XP.security_levels_css)){
       window.classList.remove(value)
+      scrollbar.classList.remove(value+"_sb");
     }
     window.classList.add(sec_class);
+    scrollbar.classList.add(sec_class+"_sb");
     return sec_class;
 
   }

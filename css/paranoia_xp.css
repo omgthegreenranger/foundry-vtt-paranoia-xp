@@ -1,7 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
 /* Global styles */
+.app,
 .window-app {
   font-family: "Tahoma", sans-serif;
+}
+
+.window-app .window-content {
+  background: white;
+  background-image: none;
+}
+
+.window-header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
 }
 
 .rollable:hover, .rollable:focus {
@@ -258,9 +278,27 @@
   color: #000;
 }
 
+.paranoia_xp .security_gray_sb {
+  scrollbar-color: #777777 #000;
+}
+
+.paranoia_xp .security_gray_sb::-webkit-scrollbar-thumb {
+  background: #777777;
+  border: #000;
+}
+
 .paranoia_xp .security_infrared {
   background: #000000;
   color: #fff;
+}
+
+.paranoia_xp .security_infrared_sb {
+  scrollbar-color: #000000 #fff;
+}
+
+.paranoia_xp .security_infrared_sb::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: #fff;
 }
 
 .paranoia_xp .security_red {
@@ -268,9 +306,27 @@
   color: #fff;
 }
 
+.paranoia_xp .security_red_sb {
+  scrollbar-color: #a20000 #fff;
+}
+
+.paranoia_xp .security_red_sb::-webkit-scrollbar-thumb {
+  background: #a20000;
+  border: #fff;
+}
+
 .paranoia_xp .security_orange {
   background: #ffa500;
   color: #000;
+}
+
+.paranoia_xp .security_orange_sb {
+  scrollbar-color: #ffa500 #000;
+}
+
+.paranoia_xp .security_orange_sb::-webkit-scrollbar-thumb {
+  background: #ffa500;
+  border: #000;
 }
 
 .paranoia_xp .security_yellow {
@@ -278,9 +334,27 @@
   color: #000;
 }
 
+.paranoia_xp .security_yellow_sb {
+  scrollbar-color: #ffff00 #000;
+}
+
+.paranoia_xp .security_yellow_sb::-webkit-scrollbar-thumb {
+  background: #ffff00;
+  border: #000;
+}
+
 .paranoia_xp .security_green {
   background: #00ff00;
   color: #000;
+}
+
+.paranoia_xp .security_green_sb {
+  scrollbar-color: #00ff00 #000;
+}
+
+.paranoia_xp .security_green_sb::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border: #000;
 }
 
 .paranoia_xp .security_blue {
@@ -288,9 +362,27 @@
   color: #000;
 }
 
+.paranoia_xp .security_blue_sb {
+  scrollbar-color: #4599ff #000;
+}
+
+.paranoia_xp .security_blue_sb::-webkit-scrollbar-thumb {
+  background: #4599ff;
+  border: #000;
+}
+
 .paranoia_xp .security_indigo {
   background: #00416A;
   color: #fff;
+}
+
+.paranoia_xp .security_indigo_sb {
+  scrollbar-color: #00416A #fff;
+}
+
+.paranoia_xp .security_indigo_sb::-webkit-scrollbar-thumb {
+  background: #00416A;
+  border: #fff;
 }
 
 .paranoia_xp .security_violet {
@@ -298,7 +390,25 @@
   color: #fff;
 }
 
+.paranoia_xp .security_violet_sb {
+  scrollbar-color: #7f00ff #fff;
+}
+
+.paranoia_xp .security_violet_sb::-webkit-scrollbar-thumb {
+  background: #7f00ff;
+  border: #fff;
+}
+
 .paranoia_xp .security_ultraviolet {
   background: #ffffff;
   color: #000;
+}
+
+.paranoia_xp .security_ultraviolet_sb {
+  scrollbar-color: #000 #000;
+}
+
+.paranoia_xp .security_ultraviolet_sb::-webkit-scrollbar-thumb {
+  background: #000;
+  border: #000;
 }
