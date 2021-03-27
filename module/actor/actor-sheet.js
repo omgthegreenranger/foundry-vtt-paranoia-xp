@@ -222,7 +222,6 @@ export class ParanoiaXPActorSheet extends ActorSheet {
     let sec_class=CONFIG.PARANOIA_XP.security_levels_css[sec_level];
     let window=this.element[0].children[0];
     let scrollbar=this.element[0].children[1];
-    console.log(window)
     //remove old security class
     for (const [sl, value] of Object.entries(CONFIG.PARANOIA_XP.security_levels_css)){
       window.classList.remove(value)
