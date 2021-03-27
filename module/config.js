@@ -55,4 +55,16 @@ PARANOIA_XP.security_levels_short={
     "Ultraviolet": "xp.Ultraviolet_s",
 }
 
+PARANOIA_XP.security_levels_css={
+    "Gray":"security_gray",
+    "Infrared":"security_infrared",
+    "Red":"security_red",
+    "Orange": "security_orange",
+    "Yellow": "security_yellow",
+    "Green": "security_green",
+    "Blue": "security_blue",
+    "Indigo": "security_indigo",
+    "Violet": "security_violet",
+    "Ultraviolet": "security_ultraviolet",
+}
 

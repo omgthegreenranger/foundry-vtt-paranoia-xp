@@ -107,6 +107,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
 
@@ -140,6 +141,7 @@ export class ParanoiaXPActorSheet extends ActorSheet {
       });
     }
     html.find('.name_string').on("change name_string",this._onNameChange(this));
+
   }
 
 
@@ -205,7 +207,27 @@ export class ParanoiaXPActorSheet extends ActorSheet {
 
     //add in sector and clones
     name += "-" + data.sector + "-" + data.clone.value;
+
+    this._setSecurityUI();
     return this.actor.update({"name": name});
+
+  }
+
+  /**
+   * Handle security ui changes
+   * @private
+   */
+  _setSecurityUI(){
+    let sec_level=this.actor.data.data.clearance;
+    let sec_class=CONFIG.PARANOIA_XP.security_levels_css[sec_level];
+    let window=this.element[0].children[0];
+    console.log(window)
+    //remove old security class
+    for (const [sl, value] of Object.entries(CONFIG.PARANOIA_XP.security_levels_css)){
+      window.classList.remove(value)
+    }
+    window.classList.add(sec_class);
+    return sec_class;
 
   }
 

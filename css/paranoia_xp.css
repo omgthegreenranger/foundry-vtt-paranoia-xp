@@ -252,3 +252,53 @@
   flex: 0 0 86px;
   text-align: right;
 }
+
+.paranoia_xp .security_gray {
+  background: #777777;
+  color: #000;
+}
+
+.paranoia_xp .security_infrared {
+  background: #000000;
+  color: #fff;
+}
+
+.paranoia_xp .security_red {
+  background: #a20000;
+  color: #fff;
+}
+
+.paranoia_xp .security_orange {
+  background: #ffa500;
+  color: #000;
+}
+
+.paranoia_xp .security_yellow {
+  background: #ffff00;
+  color: #000;
+}
+
+.paranoia_xp .security_green {
+  background: #00ff00;
+  color: #000;
+}
+
+.paranoia_xp .security_blue {
+  background: #4599ff;
+  color: #000;
+}
+
+.paranoia_xp .security_indigo {
+  background: #00416A;
+  color: #fff;
+}
+
+.paranoia_xp .security_violet {
+  background: #7f00ff;
+  color: #fff;
+}
+
+.paranoia_xp .security_ultraviolet {
+  background: #ffffff;
+  color: #000;
+}
